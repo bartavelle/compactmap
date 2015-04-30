@@ -1,6 +1,7 @@
 module Data.CompactMap
     ( CompactMap
     , fromList
+    , toVector
     , lookup
     ) where
 
@@ -24,6 +25,9 @@ getMap (CompactMap lst _) = lst
 
 fromList :: Ord k => [v] -> (v -> k) -> CompactMap k v
 fromList lst f = CompactMap (V.fromList $ sortWith f lst) f
+
+toVector :: CompactMap k v -> V.Vector v
+toVector (CompactMap v _) = v
 
 lookup :: Ord k => k -> CompactMap k v -> Maybe v
 lookup k (CompactMap lst f) = go 0 (sz - 1)
