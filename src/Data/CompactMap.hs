@@ -9,7 +9,7 @@ module Data.CompactMap
 
 import qualified Data.Vector as V
 import GHC.Exts (sortWith)
-import Data.Foldable
+import Data.Foldable as F
 import Control.Applicative
 import Prelude hiding (lookup)
 
@@ -19,8 +19,8 @@ instance Show v => Show (CompactMap k v) where
     show = show . V.toList . getMap
 
 instance Foldable (CompactMap k) where
-    foldr f i = foldr f i . getMap
-    foldMap f = foldMap f . getMap
+    foldr f i = F.foldr f i . getMap
+    foldMap f = F.foldMap f . getMap
 
 getMap :: CompactMap k v -> V.Vector v
 getMap (CompactMap lst _) = lst
