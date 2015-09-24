@@ -1,4 +1,7 @@
 # compactmap
+
+[![Build Status](https://travis-ci.org/bartavelle/compactmap.svg?branch=master)](https://travis-ci.org/bartavelle/compactmap)
+
 Memory efficient read-only key-value stores. It is built by sorting the input list and converting it to a `Vector`.
 
 Example usage:
