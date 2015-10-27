@@ -18,8 +18,22 @@ instance Show v => Show (CompactMap k v) where
     show = show . V.toList . getMap
 
 instance Foldable (CompactMap k) where
-    foldr f i = F.foldr f i . getMap
-    foldMap f = F.foldMap f . getMap
+    fold       = F.fold       . getMap
+    foldr f i  = V.foldr f i  . getMap
+    foldr' f i = V.foldr' f i . getMap
+    foldr1 f   = V.foldr1 f   . getMap
+    foldl f i  = V.foldl f i  . getMap
+    foldl' f i = V.foldl' f i . getMap
+    foldl1 f   = V.foldl1 f   . getMap
+    foldMap f  = F.foldMap f  . getMap
+    toList     = F.toList     . getMap
+    null       = F.null       . getMap
+    length     = F.length     . getMap
+    minimum    = F.minimum    . getMap
+    maximum    = F.maximum    . getMap
+    sum        = F.sum        . getMap
+    product    = F.product    . getMap
+    elem e     = F.elem e     . getMap
 
 getMap :: CompactMap k v -> V.Vector v
 getMap = CM.toVector . getCM
