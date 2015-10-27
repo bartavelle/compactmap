@@ -1,3 +1,4 @@
+{-# LANGUAGE CPP #-}
 module Data.CompactMap
     ( CompactMap
     , fromList
@@ -26,14 +27,16 @@ instance Foldable (CompactMap k) where
     foldl' f i = V.foldl' f i . getMap
     foldl1 f   = V.foldl1 f   . getMap
     foldMap f  = F.foldMap f  . getMap
+#if MIN_VERSION_base(4,8,0)
     toList     = F.toList     . getMap
+    elem e     = F.elem e     . getMap
     null       = F.null       . getMap
-    length     = F.length     . getMap
     minimum    = F.minimum    . getMap
     maximum    = F.maximum    . getMap
+    length     = F.length     . getMap
     sum        = F.sum        . getMap
     product    = F.product    . getMap
-    elem e     = F.elem e     . getMap
+#endif
 
 getMap :: CompactMap k v -> V.Vector v
 getMap = CM.toVector . getCM
