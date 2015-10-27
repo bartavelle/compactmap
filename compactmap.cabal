@@ -17,6 +17,7 @@ cabal-version:       >=1.10
 
 library
   exposed-modules:     Data.CompactMap
+                       Data.CompactMap.Generic
   -- other-modules:       
   -- other-extensions:    
   ghc-options:         -O2 -Wall

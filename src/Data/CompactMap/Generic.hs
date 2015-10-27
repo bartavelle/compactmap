@@ -1,4 +1,4 @@
-module Data.CompactMap.Unboxed
+module Data.CompactMap.Generic
     ( CompactMap
     , fromList
     , toVector
