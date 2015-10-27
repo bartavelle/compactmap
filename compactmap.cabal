@@ -2,7 +2,7 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 name:                compactmap
-version:             0.1.2
+version:             0.1.3
 synopsis:            A read-only memory-efficient key-value store.
 -- description:         
 license:             BSD3
