@@ -1,7 +1,7 @@
 # compactmap
 
 [![Build Status](https://travis-ci.org/bartavelle/compactmap.svg?branch=master)](https://travis-ci.org/bartavelle/compactmap)
-[![compactmap on Stackage LTS 3](http://stackage.org/package/compactmap/badge/lts-3)](http://stackage.org/lts-3/package/compactmap)
+[![compactmap on Stackage LTS](http://stackage.org/package/compactmap/badge/lts)](http://stackage.org/lts/package/compactmap)
 [![compactmap on Stackage Nightly](http://stackage.org/package/compactmap/badge/nightly)](http://stackage.org/nightly/package/compactmap)
 
 Memory efficient read-only key-value stores. It is built by sorting the input list and converting it to a `Vector`. This module also exports a generic version that works like the one in `Vector`.
