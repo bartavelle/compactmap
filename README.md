@@ -1,6 +1,6 @@
 # compactmap
 
-[![Build Status](https://travis-ci.org/bartavelle/compactmap.svg?branch=master)](https://travis-ci.org/bartavelle/compactmap)
+[![Haskell-CI](https://github.com/bartavelle/compactmap/actions/workflows/haskell-ci.yml/badge.svg)](https://github.com/bartavelle/compactmap/actions/workflows/haskell-ci.yml)
 [![compactmap on Stackage LTS](http://stackage.org/package/compactmap/badge/lts)](http://stackage.org/lts/package/compactmap)
 [![compactmap on Stackage Nightly](http://stackage.org/package/compactmap/badge/nightly)](http://stackage.org/nightly/package/compactmap)
 
